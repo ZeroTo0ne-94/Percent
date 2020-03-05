@@ -1,0 +1,97 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background: #03a9f4;
+    justify-content: center;
+}
+.box
+{
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .2);
+}
+.box .percent
+{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+.box .percent svg
+{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+.box .percent svg circle
+{
+    fill: none;
+    width: 150px;
+    height: 150px;
+    stroke: #000;
+    stroke-width: 10;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+.box .percent svg circle:nth-child(1)
+{
+    stroke: #f3f3f3;
+    stroke-dashoffset: 0;
+}
+#arabic .percent svg circle:nth-child(2)
+{
+    stroke: #03a9f4;
+    stroke-dashoffset: calc( 440 - ( 440 * 100 ) / 100 );
+}
+#english .percent svg circle:nth-child(2)
+{
+    stroke: #03a9f4;
+    stroke-dashoffset: calc( 440 - ( 440 * 90 ) / 100 );
+}
+#korean .percent svg circle:nth-child(2)
+{
+    stroke: #03a9f4;
+    stroke-dashoffset: calc( 440 - ( 440 * 10 ) / 100 );
+}
+.box .percent .number
+{
+    top: 0;
+    left: 0;
+    color: #999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+.box .percent .number h2
+{
+    font-size: 48px;
+}
+.box .percent .number h2 span
+{
+    font-size: 24px;
+}
+.box .text
+{
+    color: #999;
+    font-weight: 700;
+    padding: 10px 0 0;
+    letter-spacing: 1px;
+}
